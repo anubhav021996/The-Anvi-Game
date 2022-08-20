@@ -3,12 +3,14 @@ import { Body } from './components/Body';
 import { Navbar } from './components/Navbar';
 import { useEffect, useState } from 'react';
 import { Loader } from './components/loaders/Loader';
+import { Footer } from './components/Footer';
 
 const MainContent= 
 <div className="App">
   <header className="App-header">
-    <h1><Navbar /></h1>
+    <h1 id="nav"><Navbar /></h1>
     <Body />
+    <Footer />
   </header>
 </div>
 

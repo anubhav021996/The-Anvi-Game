@@ -3,7 +3,7 @@ import "./Body.css";
 import { Card1 } from "./Card1";
 import { Card2 } from "./Card2";
 import { Card3 } from "./Card3";
-import { Card4 } from "./Card4";
+import Zoom from 'react-reveal/Zoom';
 
 export const Body= () => {
     let [index,setindex]= useState(1);
@@ -20,10 +20,9 @@ export const Body= () => {
 
     return(
         <div className="Body">
-            <Card1 />
-            <Card2 />
-            <Card3 />
-            <Card4 />
+            <Zoom><Card1 /></Zoom>
+            <Zoom><Card2 /></Zoom>
+            <Zoom><Card3 /></Zoom>
         </div>
     )
 }
