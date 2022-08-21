@@ -16,3 +16,14 @@
 #nav{
     flex:1;
 }
+
+@media only screen and (max-width: 600px) {
+    .Body{
+        margin-top: 5%;
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 50px;
+    }
+    #footer{
+        margin-top: 5%;
+    }
+  }
