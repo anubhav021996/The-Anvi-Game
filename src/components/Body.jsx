@@ -12,17 +12,21 @@ export const Body= () => {
         const handleKeyPress = () => {
             let bell = new Audio("./sounds/bell.mp3");
             bell.play();
-            setindex(index+1);
+            index==36 ? setindex(1) : setindex(index+1);
         }
         window.addEventListener("keypress",handleKeyPress);
-        return ()=> window.removeEventListener("keypress",handleKeyPress);
+        window.addEventListener("click",handleKeyPress);
+        return ()=> {
+            window.removeEventListener("keypress",handleKeyPress);
+            window.removeEventListener("click",handleKeyPress);
+        }
     },[index]);
 
     return(
         <div className="Body">
-            <Zoom><Card1 /></Zoom>
-            <Zoom><Card2 /></Zoom>
-            <Zoom><Card3 /></Zoom>
+            <Zoom><Card1 index={index}/></Zoom>
+            <Zoom><Card2 index={index}/></Zoom>
+            <Zoom><Card3 index={index}/></Zoom>
         </div>
     )
 }

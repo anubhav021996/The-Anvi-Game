@@ -1,9 +1,9 @@
 import "./Body.css";
 
-export const Card2= () => {
+export const Card2= ({index}) => {
     return(
         <>
-            <img className="Card" src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></img>
+            <img className="Card" src={`./photos/${index+1}.jpg`}></img>
         </>
     )
 }
