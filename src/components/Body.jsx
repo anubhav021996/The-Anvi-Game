@@ -10,9 +10,9 @@ export const Body= () => {
 
     useEffect(()=>{
         const handleKeyPress = () => {
-            let bell = new Audio("./sounds/bell.mp3");
+            let bell = new Audio(`./sounds/${index}.wav`);
             bell.play();
-            index==36 ? setindex(1) : setindex(index+1);
+            index==30 ? setindex(1) : setindex(index+1);
         }
         window.addEventListener("keypress",handleKeyPress);
         window.addEventListener("click",handleKeyPress);
